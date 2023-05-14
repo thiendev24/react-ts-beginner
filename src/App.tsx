@@ -11,6 +11,9 @@ import Input from "./components/event/Input/Input";
 import Container from "./components/Container/Container";
 import LoggedIn from "./components/state/LoggedIn/LoggedIn";
 import User from "./components/state/User/User";
+import Counter from "./components/state/Counter/Counter";
+import Box from "./components/context/Box/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContext/ThemeContext";
 
 function App() {
   const name: string = "test-app";
@@ -35,6 +38,10 @@ function App() {
   return (
     <div>
       <div className="text-primary">tutorial</div>
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+      <Counter />
       <User />
       <LoggedIn />
       <Container
